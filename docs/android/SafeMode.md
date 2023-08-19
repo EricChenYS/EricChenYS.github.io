@@ -1,3 +1,8 @@
+---
+layout: default
+title: Safe mode
+description: Android safe mode
+---
 # Safe mode简介
 
 Safe mode存在的目的 当Android处于严重crash状态时，可以进入safe mode将导致问题的app卸载掉，解决crash后再进入normal mode
