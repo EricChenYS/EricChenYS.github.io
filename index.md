@@ -3,6 +3,7 @@ layout: default
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.  Test by cys
+[Android](./docs/Android.md).
 
 [Link to another page](./another-page.html).
 
