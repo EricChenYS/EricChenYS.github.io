@@ -1,3 +1,3 @@
 Android汇总
 
-1 [Safe mode]{android/Safe mode.md}
+1. [Safe mode](./android/SafeMode.md)
