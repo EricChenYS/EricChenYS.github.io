@@ -1,4 +1,9 @@
-方案一：
+---
+layout: default
+title: AppLock
+description: Android AppLock解决方案
+---
+## 方案一：
 DeviceOwner通过调用DPMS的setPackagesSuspended方法可以让App处于Suspend状态，可以现在App Activity的启动
 
 原理：
@@ -31,7 +36,7 @@ App Suspend状态介绍：
 
 
 
-方案二：
+## 方案二：
 特殊权限(android.Manifest.permission.SET_ACTIVITY_WATCHER protectionLevel="signature")的App设置ActivityTaskManagerService中的Controller(调用IActivityManager.aidl 中的setActivityController)，然后重写Controller中的activityStarting方法就可以实现拦截Activity的启动。
 
 原理：
@@ -100,5 +105,5 @@ interface IActivityController
 }
 ```
 
-方案三：
+## 方案三：
 Framework埋点通知App activity切换
