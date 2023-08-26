@@ -1,3 +1,9 @@
+---
+layout: default
+title: PendingIntent
+description: Android PendingIntent
+---
+
 PendingIntent pendingIntent = PendingIntent.getBroadcast(mContext, 0, intent,
 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE);
 
