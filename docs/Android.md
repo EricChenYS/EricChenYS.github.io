@@ -9,3 +9,8 @@ Android汇总
 1. [Safe mode](./android/SafeMode.md)
 2. [App Lock](./android/APP锁解决方案.md)
 3. [Usbdebugging](./android/Usbdebugging.md)
+4. [PendingIntent](./android/PendingIntent.md)
+
+
+Android开源框架
+1. [LeakCanary](./android/opensource/LeakCanary.md)
