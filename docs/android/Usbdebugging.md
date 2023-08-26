@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Usedebugging
-description: Android Usedebugging
+title: Usbdebugging
+description: Android Usbdebugging
 ---
 
 # Settings开发者选项里面开启Usb debugging
