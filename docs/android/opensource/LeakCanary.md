@@ -1,8 +1,13 @@
-功能：
+---
+layout: default
+title: LeakCanary
+description: LeakCanary原理
+---
+# 功能：
 可以用来检测Activity, Fragment, ViewModel, RooView, Service的泄漏
 
-原理：
-1）LeakCanary启动时机
+# 原理：
+## 1）LeakCanary启动时机
 MainProcessAppWatcherInstaller为ContentProvider, 其onCreate在Application的attachBaseContext之后，Application的onCreate之前被调用，因此不再需要开发者集成任何代码。
 
 ```
@@ -16,8 +21,8 @@ internal class MainProcessAppWatcherInstaller : ContentProvider() {
 
 ```
 
-2）LeakCanary行为
-A. 定义检测的对象
+## 2）LeakCanary行为
+### A. 定义检测的对象
 检测Activity，FragmentAndViewModel，RootView，Service
 
 ```
@@ -49,12 +54,12 @@ val objectWatcher = ObjectWatcher(
 ```
 
 
-B.初始化GcTrigger，HeapDumpTrigger，监测ObjectRetained，定义Shortcut等
+### B.初始化GcTrigger，HeapDumpTrigger，监测ObjectRetained，定义Shortcut等
 LeakCanaryDelegate.loadLeakCanary(application)
 在被监测的对象出现泄漏（ObjectRetained）时，触发Gc，dump hprof（Debug.dumpHprofData）
 
 
-C. 安装要监测的对象
+### C. 安装要监测的对象
 
 ```
 watchersToInstall.forEach {
@@ -167,11 +172,11 @@ C4）ServiceWatcher
 通过获取IActivityManager的serviceDoneExecuting方法在被回调时，认为是onServiceDestroyed（该阶段会在5s后监测Service是否有被回收，如果没有被回收，则认为有内存泄漏）
 
 
-源码：
+# 源码：
 https://github.com/square/leakcanary
 
 
-集成：
+# 集成：
 App build.gradle
 
 ```
@@ -181,6 +186,6 @@ dependencies {
 
 ```
 
-参考文档：
+# 参考文档：
 https://www.jianshu.com/p/036a4ea420d6
 https://blog.csdn.net/weixin_61845324/article/details/120356951
