@@ -1,6 +1,12 @@
-Settings开发者选项里面开启Usb debugging
+---
+layout: default
+title: Usedebugging
+description: Android Usedebugging
+---
+
+# Settings开发者选项里面开启Usb debugging
 行为整理
-1. Settings行为
+## 1. Settings行为
 往Settings.Global的 ADB_ENABLED("adb_enabled")里面写入1
 
 参考：
@@ -18,7 +24,7 @@ public static final int ADB_SETTING_OFF = 0;
 ```
 
 
-2. AdbService行为（SystemServer）
+## 2. AdbService行为（SystemServer）
 
 a. AdbService系统服务在onStart的时候会new一个AdbService对象，在AdbService的构造方法里面会注册ContentObserver监听Settings.Global.ADB_ENABLED的变化
 参考：
@@ -41,7 +47,7 @@ private void registerContentObservers() {
 }
 ```
 
-b. AdbSettingsObserver在监听到Settings.Global.ADB_ENABLED变化后会
+## b. AdbSettingsObserver在监听到Settings.Global.ADB_ENABLED变化后会
 
 b1) Start（或Stop）native serivce（adbd）
 
@@ -177,7 +183,7 @@ private void stopAdbd() {
 ```
 
 
-3. UsbDeviceManager行为
+## 3. UsbDeviceManager行为
 
 a. 系统服务UsbService在systemReady的时候会调用UsbDeviceManager的systemReady方法
 
@@ -310,7 +316,7 @@ private void setUsbConfig(long config, boolean chargingFunctions, int operationI
 
 
 
-4. AdbDebuggingManager行为（主要负责auth相关行为）
+## 4. AdbDebuggingManager行为（主要负责auth相关行为）
 
 a. 在AdbService的构造方法里面new了AdbDebuggingManager对象
 
@@ -637,8 +643,7 @@ private boolean startConfirmationService(ComponentName componentName, UserHandle
 
 
 
-5. adbd
+## 5. adbd
 
-6. usb
+## 6. usb
 
-7. TODO
