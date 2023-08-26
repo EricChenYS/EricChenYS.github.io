@@ -4,7 +4,7 @@ title: Android
 description: 欢迎来到WeDream的Android世界
 ---
 
-Android汇总
+# Android汇总
 
 1. [Safe mode](./android/SafeMode.md)
 2. [App Lock](./android/APP锁解决方案.md)
@@ -12,5 +12,5 @@ Android汇总
 4. [PendingIntent](./android/PendingIntent.md)
 
 
-Android开源框架
+# Android开源框架
 1. [LeakCanary](./android/opensource/LeakCanary.md)
