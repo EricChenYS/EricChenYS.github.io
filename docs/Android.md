@@ -13,6 +13,8 @@ description: 欢迎来到WeDream的Android世界
 # Android解决方案
 1. [App Lock](./android/solutions/App锁解决方案.md)
 2. [Call block](./android/solutions/CallBlock.md)
+3. [如何RootAndroid设备](./android/tools/Root.md)
+4. [如何制作官改ROM](./android/tools/DIY_ROM.md)
 
 # Android开源框架
 1. [LeakCanary](./android/opensource/LeakCanary.md)
