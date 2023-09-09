@@ -4,8 +4,10 @@ title: Android Root
 description: 如何Root Android设备
 ---
 
-步骤：
-前提：PC有安装adb，fastboot
+# 前提
+PC有安装adb，fastboot
+
+# 步骤
 ## 1）OemUnlock（Bootloader解锁）
 MTK平台解锁Bootloader
 1. 开发者选项开启OEM Unlocking开关
