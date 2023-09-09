@@ -1,6 +1,12 @@
+---
+layout: default
+title: Android Root
+description: 如何Root Android设备
+---
+
 步骤：
 前提：PC有安装adb，fastboot
-# 1）OemUnlock（Bootloader解锁）
+## 1）OemUnlock（Bootloader解锁）
 MTK平台解锁Bootloader
 1. 开发者选项开启OEM Unlocking开关
 2. 进入fastboot
@@ -12,7 +18,7 @@ MTK平台解锁Bootloader
      命令：fastboot reboot
 
 
-# 2）安装Magisk
+## 2）安装Magisk
 1. 安装Magisk Apk
      命令：adb install -r Magisk.apk
 2. Push rom的boot.img到手机
