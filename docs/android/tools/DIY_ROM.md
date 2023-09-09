@@ -5,44 +5,43 @@ description: 如何制作Android官改ROM
 ---
 
 # 一, 步骤
-## 1. 从手机里面获取img
+## 1). 从手机里面获取img
 1. adb shell
 2. cd dev/block/platform/bootdevice/by-name （不同Android版本，路径可能存在差异）
-C. ls -l
-lrwxrwxrwx 1 root root   21 2010-01-01 08:00 super -> /dev/block/mmcblk0p44
-D. dd if=/dev/block/mmcblk0p44 of=/data/local/tmp/super.img
-E. adb pull data/local/tmp/super.img .
+3. ls -l
+   lrwxrwxrwx 1 root root   21 2010-01-01 08:00 super -> /dev/block/mmcblk0p44
+4. dd if=/dev/block/mmcblk0p44 of=/data/local/tmp/super.img
+5. adb pull data/local/tmp/super.img .
 
  
-## 2. 解包
+## 2). 解包
 imjtool.ELF64 super.img extract
-[图片]
 记录group name，后面需要用到
 注：从out下面拷贝的super.img可能需要解包2次（即对解包的包再次执行上面操作）
 
 
-## 3. 改img（以改system_a.img为例，改其他img操作相同）
+## 3). 改img（以改system_a.img为例，改其他img操作相同）
 ### ext4文件系统
-A. mkdir system
-B. sudo mount -t ext4 -o loop system_a.img system
-C. 进入到挂载目录删除（或修改）文件
-D. sudo umount system
+1. mkdir system
+2. sudo mount -t ext4 -o loop system_a.img system
+3. 进入到挂载目录删除（或修改）文件
+4. sudo umount system
 注：也可以在root的手机里面挂载（例如：mount -t ext4 -o loop sdcard/system_a.img data/local/tmp/system ）
 
 ### erofs文件系统
-A. erofs解包
+1. erofs解包
 sudo fsck.erofs --extract=./extracted --no-preserve --force --overwrite product_a.img
-B. 删除目标文件
-C. erofs重打包
+2. 删除目标文件
+3. erofs重打包
 sudo mkfs.erofs -zlz4  -U00000000-0000-0000-0000-000000000000 --ignore-mtime lz4.product.img ./extracted/
 
 
-## 4. 获取各个img的大小（下面方法选一）
+## 4). 获取各个img的大小（下面方法选一）
 stat -c '%n %s' *.img 
 ls -l *.img
 
 
-## 5. 重打包
+## 5). 重打包
 sprd:
 lpmake --metadata-size 65536\
  --device-size=5872025600\  根据xml中的super分区size调整
@@ -121,8 +120,8 @@ group后面size是该group下img size的总和
 cd dev/block/platform/bootdevice/by-name 
 lrwxrwxrwx 1 root root   21 2010-01-01 08:00 super -> /dev/block/mmcblk0p44
 dd if=/dev/block/mmcblk0p44 of=/data/local/tmp/super.img
-1. 然后mout，修改内容，unmout
-2. 然后刷这个susper.img
+2. 然后mout，修改内容，unmout
+3. 然后刷这个susper.img
 
 
 # 二, 工具
