@@ -1,3 +1,9 @@
+---
+layout: default
+title: Android DIY ROM
+description: 如何制作Android官改ROM
+---
+
 # 一, 步骤
 ## 1. 从手机里面获取img
 A. adb shell
