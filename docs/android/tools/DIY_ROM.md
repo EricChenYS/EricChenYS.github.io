@@ -100,9 +100,8 @@ lpmake --metadata-size 65536\
  --image=vendor_b=./vendor_b.img\
  --sparse \
  --output ./super.new.img
-注：group main_a和main_b在解压的时候可以看到
-product_a，system_a，vendor_a等的大小由步骤4计算出来
-group后面size是该group下img size的总和
+
+注：group main_a和main_b在解压的时候可以看到product_a，system_a，vendor_a等的大小由步骤4计算出来group后面size是该group下img size的总和
 [图片]
 
 
@@ -133,8 +132,10 @@ dd if=/dev/block/mmcblk0p44 of=/data/local/tmp/super.img
 # 二, 工具
 ## 1. imjtool
 http://newandroidbook.com/tools/imjtool.html
+
 从手机里面获取img的方法如下，使用下面方法也可以获取到其他img，例如：susper.img
 [图片]
+
 注：不同android版本路径可能有差异
 dev/block/platform/bootdevice/by-name
 
@@ -150,8 +151,10 @@ https://github.com/sekaiacg/erofs-utils/releases/tag/v1.6-230720
 
 # 三, 参考文档
 https://blog.senyuuri.info/posts/2022-04-27-patching-android-super-images/
+
 https://forum.xda-developers.com/t/guide-universal-guide-for-making-your-partitions-inside-super-read-writable-again.4483933/
 
 erofs格式img
 https://github.com/sekaiacg/erofs-utils 已编译
+
 https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/snapshot/erofs-utils-1.6.tar.gz
