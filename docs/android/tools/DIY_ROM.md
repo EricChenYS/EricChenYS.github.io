@@ -6,8 +6,8 @@ description: 如何制作Android官改ROM
 
 # 一, 步骤
 ## 1. 从手机里面获取img
-A. adb shell
-B. cd dev/block/platform/bootdevice/by-name （不同Android版本，路径可能存在差异）
+1. adb shell
+2. cd dev/block/platform/bootdevice/by-name （不同Android版本，路径可能存在差异）
 C. ls -l
 lrwxrwxrwx 1 root root   21 2010-01-01 08:00 super -> /dev/block/mmcblk0p44
 D. dd if=/dev/block/mmcblk0p44 of=/data/local/tmp/super.img
