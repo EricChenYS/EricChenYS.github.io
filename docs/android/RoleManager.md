@@ -18,7 +18,8 @@ Android RoleManager是Android 8.0（API level 26）引入的一个系统服务�
 
 # 2. 流程介绍
 ## 2.1 addRole
-暂时无法在Transsioner文档外展示此内容
+![image](https://github.com/EricChenYS/EricChenYS.github.io/assets/5690448/7c146099-1dcd-4e68-9725-52bbdcbb9ad3)
+
 
 ## 2.2 Android支持哪些Role
 packages/modules/Permission/PermissionController/res/xml/roles.xml
