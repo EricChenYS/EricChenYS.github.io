@@ -27,7 +27,9 @@ DevicePolicyManager的addUserRestriction接口来设置
 
 ## 2.3 行为分析
 1）adb shell pm  set-user-restriction no_install_unknown_sources 1
+
 2）do设置no_install_unknown_sources
+
 3）adb shell dumpsys user
 
 ![image](https://github.com/EricChenYS/EricChenYS.github.io/assets/5690448/a3c3b4bb-d458-4c65-9e0d-3bceebba23c1)
