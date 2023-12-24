@@ -9,6 +9,8 @@ description: 欢迎来到WeDream的Android世界
 2. [Safe mode](./android/SafeMode.md)
 3. [Usbdebugging](./android/Usbdebugging.md)
 4. [PendingIntent](./android/PendingIntent.md)
+5. [RoleManager](./android/RoleManager.md)
+6. [RescueParty](./android/RescueParty.md)
 
 # Android解决方案
 1. [App Lock](./android/solutions/App锁解决方案.md)
