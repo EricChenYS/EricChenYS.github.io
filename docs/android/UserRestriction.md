@@ -32,7 +32,7 @@ DevicePolicyManager的addUserRestriction接口来设置
 
 3）adb shell dumpsys user
 
-![image](https://github.com/EricChenYS/EricChenYS.github.io/assets/5690448/a3c3b4bb-d458-4c65-9e0d-3bceebba23c1)
+
 
 分析：
 Restrictions:
