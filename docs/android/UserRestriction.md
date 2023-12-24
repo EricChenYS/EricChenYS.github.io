@@ -15,10 +15,10 @@ adb shell pm set-user-restriction [--user USER_ID] RESTRICTION VALUE
 pm命令的实质是通过UserManger的setUserRestriction接口来设置（需要权限）
 
 例如：
-| 指令描述        | 指令          |
-|:-------------|:------------------|
-| 添加限制 | adb shell pm  set-user-restriction no_install_unknown_sources 1 |
-| 移除限制 | adb shell pm  set-user-restriction no_install_unknown_sources 0 |
+
+添加限制: adb shell pm  set-user-restriction no_install_unknown_sources 1
+
+移除限制: adb shell pm  set-user-restriction no_install_unknown_sources 0
 
 
 
