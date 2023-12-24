@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: RoleManager
+description: Android RoleManager
+---
 
 
 # 1. 简介
