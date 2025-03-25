@@ -29,11 +29,14 @@ total： 表示自系统启动以来，因资源（如内存、CPU、I/O）不�
 
 ### 数值解读
 avg10=5.2% 表示过去10秒内，有5.2%的时间系统因资源不足导致任务延迟。
+
 total=123456789 表示：从系统启动到当前时刻，因内存不足导致部分任务停滞的总时间为 123,456,789 微秒（即约 123.46 秒）
 
 ### 高低意义：
 avg10 高：短期压力大（需立即关注，可能影响当前任务）。
 avg60/avg300 高：中长期压力大（需优化资源配置或排查泄漏）
 total：若total随运行时间快速增加，可能暗示内存泄漏或资源配置不足
+
+参考：https://cs.android.com/android/platform/superproject/main/+/main:frameworks/base/services/core/java/com/android/server/am/LowMemDetector.java
 
 
