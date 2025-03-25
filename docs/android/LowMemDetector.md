@@ -5,7 +5,7 @@ description: 低内存检测
 ---
 # 低内存检测
 ## 1. 实现原理
-依赖Linux Kernel的PSI，LowMemThread会等待PSI会上报event
+依赖Linux Kernel的PSI，LowMemThread会等待PSI会上报event；该线程在ActivityManagerService构造方法里面启动
 
 ## 2. PSI
 Pressure Stall Information（压力失速信息），这是 Linux 内核中的一种机制，用于实时监测系统资源（CPU、内存、I/O）的压力状态。当系统资源不足时，PSI 会通过指标反映资源争用情况，帮助检测问题。
