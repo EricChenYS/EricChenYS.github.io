@@ -17,6 +17,7 @@ description: 欢迎来到WeDream的Android世界
 10. [Broadcast](./android/Broadcast.md)
 11. [PackageManager](./android/PackageManager.md)
 12. [SetupWizard](./android/SetupWizard.md)
+13. [aidl生成jar](./android/aidl生成jar.md)
 
 # Android解决方案
 1. [App Lock](./android/solutions/App锁解决方案.md)
