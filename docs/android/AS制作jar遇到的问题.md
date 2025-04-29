@@ -8,9 +8,17 @@ description: AS制作jar时遇到implementation引入的其他jar无法被打包
 期望结果：implementation引入的会被打包进来，compileOnly引入的不被打包进来
 
 # 原因
+## 1. Gradle依赖配置特性
+implementation配置的依赖是编译+运行时依赖，但默认不会被打包到输出的JAR中
+Java Library插件设计的标准JAR包仅包含项目自身编译的类文件
+这是Gradle的标准行为，遵循Java库的常规打包规范
+## 2. JAR任务默认行为
+默认jar任务只打包src/main/java编译输出的.class文件
+不包含任何依赖项（包括本地JAR和远程库）
+
 
 # 解决方案
-集成gradle的插件Shadow
+集成gradle的插件Shadow可以创建FAT JAR
 https://gradleup.com/shadow/
 
 ## project build.gradle
