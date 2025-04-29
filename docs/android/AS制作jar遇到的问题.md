@@ -16,6 +16,7 @@ https://gradleup.com/shadow/
 ## project build.gradle
 ```java
     repositories
+        // 增加
         maven {
             url = uri("https://plugins.gradle.org/m2/")
         }
@@ -27,6 +28,9 @@ https://gradleup.com/shadow/
         classpath 'com.gradleup.shadow:shadow-gradle-plugin:8.3.4'  //增加
     }
 ```
+
+## gradle wrapper
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-bin.zip
 
 ## jar的build.gradle
 ```java
